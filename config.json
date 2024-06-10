@@ -1,0 +1,6 @@
+{
+  "batch_size": 2,
+  "template_path": "path/to/template.nii.gz",
+  "blacklist_path": "/path/to/blacklist.json",
+  "input_file_list_path": "/path/to/file_list.json"
+}
