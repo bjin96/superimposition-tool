@@ -3,17 +3,27 @@
 A simple tool written in Python to visualise a large number of co-registered CT scans simultaneously to identify and
 inspect inaccurate registrations and anomalous scans.
 
-<style>
-table th:first-of-type {
-    width: 32.6%;
-}
-table th:nth-of-type(2) {
-    width: 33.8%;
-}
-table th:nth-of-type(3) {
-    width: 33.8%;
-}
-</style>
+[//]: # (<style>)
+
+[//]: # (table th:first-of-type {)
+
+[//]: # (    width: 32.6%;)
+
+[//]: # (})
+
+[//]: # (table th:nth-of-type&#40;2&#41; {)
+
+[//]: # (    width: 33.8%;)
+
+[//]: # (})
+
+[//]: # (table th:nth-of-type&#40;3&#41; {)
+
+[//]: # (    width: 33.8%;)
+
+[//]: # (})
+
+[//]: # (</style>)
 
 [//]: # (Superimpose             |     Binary mask overlay      |   Original co-registered scan            )
 
