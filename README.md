@@ -35,7 +35,7 @@ inspect inaccurate registrations and anomalous scans.
 
 Clone the repository:
 
-```git clone```
+```git clone https://github.com/bjin96/superimposition-tool.git```
 
 Install the dependencies:
 
