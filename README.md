@@ -74,8 +74,8 @@ The input file list must have the following format:
 
 ```json
 [
-  "/path/to/the/blacklisted/file1.nii.gz",
-  "/path/to/the/blacklisted/file2.nii.gz",
+  "/path/to/the/file1.nii.gz",
+  "/path/to/the/file2.nii.gz",
   ...
 ]
 ```
