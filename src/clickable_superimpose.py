@@ -19,6 +19,9 @@ class SuperimpositionTool(QtWidgets.QWidget):
     def __init__(self, batch_size, template_path, blacklist_path, input_file_list_path):
         super().__init__()
 
+        self.batch_size = batch_size
+        self.input_file_list_path = input_file_list_path
+
         self.current_slice = 0
         self.current_single_image_slice = 0
         self.template_path = template_path
@@ -99,9 +102,9 @@ class SuperimpositionTool(QtWidgets.QWidget):
         self.thread = BatchFetcher(
             load_batch_information,
             self.on_load_batch_information_finished,
-            INPUT_FILE_LIST_PATH,
+            input_file_list_path,
             self.current_batch_number + 1,
-            BATCH_SIZE
+            batch_size
         )
 
     def show_add_to_blacklist_dialog(self):
@@ -131,9 +134,9 @@ class SuperimpositionTool(QtWidgets.QWidget):
         self.thread = BatchFetcher(
             load_batch_information,
             self.on_load_batch_information_finished,
-            INPUT_FILE_LIST_PATH,
+            self.input_file_list_path,
             self.current_batch_number + 1,
-            BATCH_SIZE
+            self.batch_size
         )
 
         self.batch_number_display.setText(f'Batch: {self.current_batch_number}')
@@ -306,9 +309,9 @@ class SuperimpositionTool(QtWidgets.QWidget):
                 self.scans_with_data_at_selected_location.clear()
             if e.inaxes == self.ax:
                 if e.button == 'up':
-                    self.current_slice = self.current_slice + 1 % self.current_image_data.shape[2]
+                    self.current_slice = (self.current_slice + 1) % self.current_image_data.shape[2]
                 elif e.button == 'down':
-                    self.current_slice = self.current_slice - 1 % self.current_image_data.shape[2]
+                    self.current_slice = (self.current_slice - 1) % self.current_image_data.shape[2]
                 self.image.set_data(self.current_image_data[:, :, self.current_slice])
                 self.figure.canvas.draw_idle()
 
