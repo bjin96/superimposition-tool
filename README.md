@@ -1,7 +1,9 @@
 # CT Scan Superimposition Tool
 
 A simple tool written in Python to visualise a large number of co-registered CT scans simultaneously to identify and
-inspect inaccurate registrations and anomalous scans.
+inspect inaccurate registrations and anomalous scans. The tool is part of a larger pre-processing and quality control
+pipeline described in [Jin et al.](https://link.springer.com/chapter/10.1007/978-3-031-73748-0_8), which is available
+in the [ct-processing repository](https://github.com/bjin96/ct-processing).
 
 [//]: # (<style>)
 
@@ -83,4 +85,12 @@ The input file list must have the following format:
 Start the tool with
 ```
 python run.py
+```
+
+# Acknowledgment and Citation
+
+The work was funded by the UK Medical Research Council's Doctoral Training Programme in Precision Medicine [MR/W006804/1].
+
+```
+Jin, B., Valdés Hernández, M.D.C., Fontanella, A., Li, W., Platt, E., Armitage, P., Storkey, A., Wardlaw, J.M., Mair, G., 2025. Pre-processing and Quality Control of Large Clinical CT Head Datasets for Intracranial Arterial Calcification Segmentation, in: Bhattarai, B., Ali, S., Rau, A., Caramalau, R., Nguyen, A., Gyawali, P., Namburete, A., Stoyanov, D. (Eds.), Data Engineering in Medical Imaging, Lecture Notes in Computer Science. Springer Nature Switzerland, Cham, pp. 73–83. https://doi.org/10.1007/978-3-031-73748-0_8
 ```
